@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./signin.css"
 export function SignIn(){
+
+    const navigate=useNavigate()
     return(
         <div className="signIn">
             
@@ -10,7 +12,9 @@ export function SignIn(){
             <input placeholder="Enter your email" type="email" required/>
             <input placeholder="Enter your passwaord" type="password" required/>
              <p> No account? <Link to="/sign_out"> Create one!</Link></p>
-             <button >Sign In</button> 
+             <button onClick={()=>{
+                navigate("/chat")
+             }}>Sign In</button> 
             </div>
         </form>
         </div>

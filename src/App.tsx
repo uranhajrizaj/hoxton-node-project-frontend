@@ -1,11 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
+import { SignIn } from './pages/SignIn'
+import { SignOut } from './pages/SignOut'
 
 function App() {
   return (
     <div className="App">
-      <h1>Chat App</h1>
+     <Routes>
+        <Route index element={<Navigate to="/sign_in"/>} />
+        <Route path="/sign_in" element={<SignIn />}/>
+        <Route path="/sign_out" element={<SignOut />}/>
+      </Routes>
     </div>
   )
 }

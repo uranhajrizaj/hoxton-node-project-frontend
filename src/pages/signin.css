@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.signIn{
+    display:grid;
+    place-content: center;
+    height:100vh;
+    /* background-image: url("https://media.istockphoto.com/photos/man-symbol-drawn-blue-wood-blocks-which-are-connected-by-dotted-lines-picture-id1257024035?k=20&m=1257024035&s=612x612&w=0&h=np20HGxKWReSny2qn8NRpx7ooAI1gB7NhF-j5Dflf6k="); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+    display:grid;   
+    gap:25px;
+    border: 1px solid gray;
+    padding:10px;
+    border-radius: 10px;
+}
+input, button {
+    border-radius: 5px;
+    padding:2px 5px;
+}
+.form_content{
+    display:grid;   
+    gap: 17px;
+    padding:10px;
+}
+label{
+    display:grid;
+    gap:5px
+}
+h1{
+    text-align: center;
+    font-family: 'Alex Brush', cursive;
+    font-family: 'Dancing Script', cursive;
+  
+}
+
+

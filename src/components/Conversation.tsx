@@ -4,32 +4,55 @@ import "../pages/chat.css"
 export function Connversation() {
     return (
         <div className="conversation">
-            <header> 
-            <img src="https://images.pexels.com/photos/12009329/pexels-photo-12009329.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"/>
-            <p>Ergi Boja</p>
+            <header className="conversationheader"> 
+            <div className="friendcard">
+            <img  className="avatarimg"src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"/>
+            <div className="pcontainer">
+            <p className="conversationp">Ergi Boja</p>
+            <p className="onlinep">Is Online</p>
+            </div>
+            </div>
             </header>
-             <div className='messsages'>
-            
-            <div className='friend_messsage'>
-            <img src="https://images.pexels.com/photos/13727429/pexels-photo-13727429.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"/>
-            <div >
-                <p>Uran </p>
-                <p>Hello Ergi</p>
-            </div>
-            </div >
-            <div className='my_messsage'>
-            <div>
-                <p>Me</p>
-                <p>Hello Uran</p>
-            </div>
-            <img src="https://images.pexels.com/photos/12009329/pexels-photo-12009329.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"/>
-            </div>
-         
-             </div>
-            <form className='send-message'>
-                <input placeholder='Send a message here....'/>
-                <BiSend className='sent-icon'/>
-            </form>
+            <div className="msger-chat">
+    <div className="msg left-msg">
+      
+
+      <div className="msg-bubble">
+        <div className="msg-info">
+          
+          <div className="msg-info-time">12:45</div>
         </div>
+
+        <div className="msg-text">
+       Ckemi 
+        </div>
+      </div>
+    </div>
+
+    <div className="msg right-msg">
+      
+
+      <div className="msg-bubble">
+        <div className="msg-info">
+          <div className="msg-info-name">ME</div>
+          <div className="msg-info-time">12:46</div>
+        </div>
+
+        <div className="msg-text">
+        HEllo
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+            
+            
+  <form className="msger-inputarea">
+    <input type="text" className="msger-input" placeholder="Enter your message..."/>
+    <button type="submit" className="msger-send-btn">Send</button>
+  </form>
+  </div>
+        
     )
 }

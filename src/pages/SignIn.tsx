@@ -4,19 +4,42 @@ export function SignIn(){
 
     const navigate=useNavigate()
     return(
-        <div className="signIn">
-            
-        <form>
-            <h1>Hi There</h1>
-            <div className="form_content">
-            <input placeholder="Enter your email" type="email" required/>
-            <input placeholder="Enter your passwaord" type="password" required/>
-             <p> No account? <Link to="/sign_out"> Create one!</Link></p>
-             <button onClick={()=>{
+        <section className="sectioni">
+        <div className="container">
+            <form id="loginform">
+                <h1 className="loginh1">Login</h1>
+                <div className="input-field">
+                    <i className="uil uil-envelope icon"></i><input type="email"   required placeholder="Enter Your Email:" />
+                </div>
+                <div className="input-field">
+                    <i className="uil uil-lock icon"></i><input type="password"   required placeholder="Enter Your Password:" />
+                </div>
+                <button className="loginbtn" onClick={()=>{
                 navigate("/chat")
-             }}>Sign In</button> 
-            </div>
-        </form>
+             }}  type="submit" value="Submit">Login</button>
+                <p className="error"></p>
+                <p ></p>
+                <h2 className="formh2">Don't have an account ? <Link to="/sign_out">SignUp Now</Link> </h2>
+
+
+
+
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
+        </section>
+
     )
 }

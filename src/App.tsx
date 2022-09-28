@@ -8,7 +8,6 @@ import { SignOut } from './pages/SignOut'
 function App() {
   return (
     <div className="App">
-  
      <Routes>
         <Route index element={<Navigate to="/sign_in"/>} />
         <Route path="/sign_in" element={<SignIn />}/>

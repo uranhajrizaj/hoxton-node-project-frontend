@@ -7,10 +7,10 @@ export function Friends({ currentuser, setselectedFriend }: any) {
                 <input placeholder='search friends' />
             </form>
             <ul className='your-friends'>
-                {currentuser.following.map((firend: any) => {
-                    return <li onClick={() => { setselectedFriend(firend.friend2) }}>
-                        <img src={firend.friend2.image} />
-                        <p>{firend.friend2.name}</p>
+                {currentuser.friends?.map((friend: any) => {
+                    return <li onClick={() => { setselectedFriend(friend) }}>
+                        <img src={friend.image} />
+                        <p>{friend.name}</p>
                     </li>
                 })}
             </ul>

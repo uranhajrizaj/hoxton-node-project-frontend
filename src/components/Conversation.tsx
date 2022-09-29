@@ -3,12 +3,19 @@ import { BiSend } from "react-icons/bi"
 import io from "socket.io-client";
 
 export function Connversation({ selectedFriend, currentuser }: any) {
-    const [messages, setMessages] = useState(["hello"])
-    const socket = io();
+    const [messages, setMessages] = useState([])
+    const [socket, setSocket] = useState<any>(null)
 
-    socket.on('chat message', function (msg) {
-        setMessages([...messages, msg])
-    })
+    useEffect(() => {
+        const socket = io("ws://localhost:4555");
+        setSocket(socket)
+        console.log(socket)
+        socket.on("message",(messages)=>{
+            setMessages(messages)
+        })     
+    }, [])
+    
+    console.log(messages)
     return (
         <div className="conversation">
             <header>
@@ -17,14 +24,17 @@ export function Connversation({ selectedFriend, currentuser }: any) {
             </header>
             <div className='messsages'>
                 <div className='friend_messsage'>
-                    {messages.map((msg) => <li>{msg}</li>
+                    <ul className='messsages_list'>
+                    {messages.map((msg) => <li>{msg.user.name}: {msg.content}</li>
                     )}
+                    </ul>
+                   
                 </div>
             </div>
             <form className='send-message' onSubmit={(e) => {
                 e.preventDefault()
                 if (e.target.text.value) {
-                    socket.emit('chat message', e.target.text.value);
+                    socket.emit('message',{content:e.target.text.value, user: currentuser} );
                     e.target.text.value = '';
                 }
             }}>

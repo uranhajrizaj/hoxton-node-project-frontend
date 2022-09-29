@@ -106,3 +106,7 @@ header {
   display: grid;
   place-content: center;
 }
+.messsages_list{
+  display:grid;
+
+}

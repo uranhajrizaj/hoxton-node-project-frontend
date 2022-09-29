@@ -22,7 +22,7 @@ export function Connversation({ selectedFriend, currentuser }: any) {
                 </div>
             </div>
             <form className='send-message' onSubmit={(e) => {
-                e.preventDefault
+                e.preventDefault()
                 if (e.target.text.value) {
                     socket.emit('chat message', e.target.text.value);
                     e.target.text.value = '';

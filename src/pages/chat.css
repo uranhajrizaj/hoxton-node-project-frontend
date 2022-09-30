@@ -108,5 +108,34 @@ header {
 }
 .messsages_list{
   display:grid;
+  list-style: none;
+  /* place-content: center; */
+  gap:10px
+}
+.my_message{
+  display:grid;
+  place-content: end;
+ 
+}
+.friend_message{
+  display:grid;
+  place-content: start;
+  
 
+}
+.my_messagediv{
+   background-color: royalblue;
+   color:white;
+   padding:5px;
+   border-radius: 3px;
+}
+.friend_messagediv{
+  background-color: rgb(115, 143, 230);
+  color:white;
+  padding:5px;
+  border-radius: 3px;
+}
+.message_sender{
+  color:rgb(209, 205, 205);
+  font-size: 13px;
 }

@@ -44,7 +44,7 @@
 .search_friends {
   all: unset;
   display: grid;
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
   padding: 5px;
 }
 
@@ -57,15 +57,15 @@
 }
 .your-friends {
   background-color: #fafafa;
+ 
 }
 .your-friends li {
   display: grid;
   grid-auto-flow: column;
   place-content: center start;
-  border-bottom: 1px solid gray;
   height: 50px;
   padding: 5px;
-  gap: 5px;
+   margin-top: 5px;
   cursor: pointer;
 }
 .your-friends li:hover {

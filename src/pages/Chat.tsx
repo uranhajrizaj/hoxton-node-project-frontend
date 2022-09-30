@@ -7,7 +7,7 @@ import "./chat.css"
 
 export function Chat({ signOut, currentuser }: any) {
     const [selectedFriend, setselectedFriend] = useState(null)
-    if(!currentuser) return <p>Loading....</p>
+    if (!currentuser) return <p>Loading....</p>
     return (
         <div className="chat">
             <LeftMenu signout={signOut} currentuser={currentuser} />
@@ -16,10 +16,10 @@ export function Chat({ signOut, currentuser }: any) {
                 <Connversation selectedFriend={selectedFriend} currentuser={currentuser} />
                 :
                 <div className="conversation selectedfriend">
-                      <div className="info">
-                     <p className='text'>Choose a friend to have a chat...</p>
-                     <p className='sticker'>😕</p>
-                     </div>
+                    <div className="info">
+                        <p className='text'>Choose a friend to have a chat...</p>
+                        <p className='sticker'>😕</p>
+                    </div>
                 </div>
             }
         </div>

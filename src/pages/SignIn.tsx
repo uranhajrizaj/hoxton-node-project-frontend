@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./signin.css"
-type Prop={
-    signIn:(data:object)=>void
+type Prop = {
+    signIn: (data: object) => void
 }
 export function SignIn({ signIn }: Prop) {
     const [signInError, setSignInError] = useState("")

@@ -58,7 +58,7 @@ export function Connversation({ selectedFriend, currentuser }: any) {
     return (
         <div className="conversation">
             <header>
-                <img  className="friend_image"src={selectedFriend.image} />
+                <img className="friend_image" src={selectedFriend.image} />
                 <p>{selectedFriend.name}</p>
             </header>
             <div className='messsages'>

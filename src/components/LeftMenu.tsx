@@ -9,7 +9,7 @@ export function LeftMenu({ signOut, currentuser }: any) {
     return (
         <div className="left_menu">
          <img src={currentuser.image} />
-            <AiOutlineLogout onClick={() => {
+            <AiOutlineLogout className="sign_out" onClick={() => {
                 signOut
                  navigate("/sign_in")
           }} />

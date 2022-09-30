@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script&family=Playball&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +10,13 @@
   display: grid;
   grid-auto-flow: column;
   /* place-content: center; */
-  grid-template-columns: 30px 0.7fr 1fr;
+  grid-template-columns: 40px 0.7fr 1fr;
   padding: 0.3rem;
   height: 100vh;
 }
 .chat img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
@@ -22,8 +24,15 @@
 .left_menu {
   display: grid;
   place-content: center;
-  border-right: 1px solid gray;
-  gap: 5px;
+  justify-items: center;
+  /* border-right: 1px solid gray; */
+  gap: 15px;
+  padding:3px;
+  background-color: #CFD2CF;
+}
+.sign_out{
+  font-size: 30px;
+  color:red
 }
 /* friends.tsx style */
 .friends {
@@ -36,12 +45,19 @@
   all: unset;
   display: grid;
   border-bottom: 1px solid gray;
+  padding:5px
 }
 
 .search_friends input {
   all: unset;
   padding: 10px;
   place-content: center;
+  background-color: rgb(202, 199, 199);
+  border-radius: 10px;
+
+}
+.your-friends{
+  background-color: #fafafa;
 }
 .your-friends li {
   display: grid;
@@ -57,6 +73,16 @@
   background-color: rgb(202, 198, 198);
   color: white;
 }
+.friend_li{
+  align-items: center;
+  background-color: rgb(252 168 124) ;
+  color: white
+}
+.friend_li_selected{
+  align-items: center;
+  background-color: rgb(236 117 109);
+  color: white
+}
 
 /* conversation.tsx style */
 .conversation {
@@ -69,9 +95,15 @@ header {
   place-content: center start;
   gap: 5px;
   /* height: 50px; */
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
   padding: 0.3rem;
+  font-size: 25px;
+  align-items: center;
+  background-color: rgb(236 117 109);
+  color:white;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .send-message {
   all: unset;
   display: grid;
@@ -89,6 +121,8 @@ header {
 }
 .messsages {
   padding: 5px;
+  background-image: url("./wallpaper.png");
+  background-color: #FBF2CF;
 }
 .friend_messsage {
   display: grid;
@@ -104,7 +138,22 @@ header {
 }
 .selectedfriend {
   display: grid;
-  place-content: center;
+  place-content: center ;
+  background-color: antiquewhite;
+}
+.info{
+ display: grid;
+ place-content: center;
+}
+.sticker{
+  justify-self: center;
+  font-size: 35px;
+}
+.text{
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Playball', cursive;
+  font-size: 30px;
 }
 .messsages_list{
   display:grid;
@@ -124,7 +173,7 @@ header {
 
 }
 .my_messagediv{
-   background-color: royalblue;
+   background-color:#FA7070;
    color:white;
    padding:5px;
    border-radius: 3px;

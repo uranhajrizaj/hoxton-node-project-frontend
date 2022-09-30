@@ -15,7 +15,12 @@ export function Chat({ signOut, currentuser }: any) {
             {selectedFriend ?
                 <Connversation selectedFriend={selectedFriend} currentuser={currentuser} />
                 :
-                <div className="conversation selectedfriend"> <p>Choose a friend to have a chat...</p></div>
+                <div className="conversation selectedfriend">
+                      <div className="info">
+                     <p className='text'>Choose a friend to have a chat...</p>
+                     <p className='sticker'>😕</p>
+                     </div>
+                </div>
             }
         </div>
 
